@@ -1,0 +1,45 @@
+:root{--primary:#1a73e8;--secondary:#28a745;--sidebar-bg:#2c3e50;}
+.sidebar{background:var(--sidebar-bg);min-height:100vh;width:240px;position:fixed;top:0;left:0;z-index:100;transition:all .3s;overflow-y:auto;}
+.sidebar .logo-area{padding:20px 15px;border-bottom:1px solid rgba(255,255,255,.1);}
+.sidebar .logo-area h5{color:#fff;font-size:.9rem;margin:0;}
+.sidebar .nav-link{color:#ecf0f1;padding:10px 20px;display:flex;align-items:center;gap:10px;transition:all .2s;font-size:.9rem;}
+.sidebar .nav-link:hover,.sidebar .nav-link.active{background:rgba(255,255,255,.1);color:#fff;}
+.sidebar .nav-link i{width:20px;text-align:center;}
+.sidebar .nav-section{padding:6px 20px;font-size:.7rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px;}
+.main-content{margin-left:240px;min-height:100vh;background:#f5f6fa;transition:all .3s;}
+.topbar{background:#fff;border-bottom:1px solid #e8ecef;padding:12px 20px;position:sticky;top:0;z-index:99;box-shadow:0 2px 4px rgba(0,0,0,.05);}
+.card{border:none;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.07);}
+.card-header{background:transparent;border-bottom:1px solid #f0f2f5;padding:16px 20px;}
+.stat-card{border-radius:12px;padding:20px;color:#fff;position:relative;overflow:hidden;}
+.stat-card .stat-icon{font-size:2.5rem;opacity:.3;position:absolute;right:15px;top:15px;}
+.stat-card .stat-value{font-size:1.8rem;font-weight:700;}
+.stat-card .stat-label{font-size:.85rem;opacity:.85;}
+.module-card{border-radius:16px;border:none;box-shadow:0 4px 15px rgba(0,0,0,.1);transition:transform .2s,box-shadow .2s;cursor:pointer;}
+.module-card:hover{transform:translateY(-4px);box-shadow:0 8px 25px rgba(0,0,0,.15);}
+.module-icon{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 15px;}
+.schedule-table th{background:var(--primary);color:#fff;text-align:center;font-weight:600;padding:10px;}
+.schedule-badge{display:inline-block;padding:4px 8px;border-radius:6px;font-size:.8rem;font-weight:600;color:#fff;width:100%;}
+.desempeno-bajo{background:#e74c3c;color:#fff;}
+.desempeno-basico{background:#f39c12;color:#fff;}
+.desempeno-alto{background:#27ae60;color:#fff;}
+.desempeno-superior{background:#2980b9;color:#fff;}
+.timeline{position:relative;padding-left:30px;}
+.timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:#e8ecef;}
+.timeline-item{position:relative;margin-bottom:20px;}
+.timeline-dot{width:20px;height:20px;border-radius:50%;background:var(--primary);position:absolute;left:-30px;top:5px;display:flex;align-items:center;justify-content:center;}
+.timeline-dot i{font-size:.6rem;color:#fff;}
+.timeline-content{background:#fff;border-radius:10px;padding:15px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.timeline-date{font-size:.8rem;color:#999;font-weight:600;}
+.notes-table input.nota-input{width:65px;text-align:center;border:1px solid #dee2e6;border-radius:4px;padding:4px;font-size:.9rem;}
+.notes-table input.nota-input:focus{border-color:var(--primary);outline:none;box-shadow:0 0 0 2px rgba(26,115,232,.2);}
+.auth-wrapper{min-height:100vh;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;padding:20px;}
+.auth-card{background:#fff;border-radius:16px;padding:40px;width:100%;max-width:440px;box-shadow:0 20px 60px rgba(0,0,0,.2);}
+.auth-logo{text-align:center;margin-bottom:20px;}
+.auth-title{text-align:center;font-size:1.3rem;font-weight:700;color:#2c3e50;margin-bottom:5px;}
+.auth-subtitle{text-align:center;color:#999;font-size:.9rem;margin-bottom:25px;}
+.notif-badge{position:absolute;top:-5px;right:-5px;min-width:18px;height:18px;font-size:.65rem;}
+.notif-dropdown{width:320px;max-height:400px;overflow-y:auto;}
+.anio-badge{background:var(--primary);color:#fff;padding:3px 10px;border-radius:20px;font-size:.8rem;font-weight:700;}
+.payment-row.vencido td{background:rgba(231,76,60,.08);}
+.payment-row.pagado td{background:rgba(39,174,96,.08);}
+@media(max-width:768px){.sidebar{transform:translateX(-100%)}.sidebar.show{transform:translateX(0)}.main-content{margin-left:0}}
